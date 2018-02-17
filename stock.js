@@ -84,7 +84,7 @@ function financials(ticker) {
 }
 
 function rss(ticker){
-	var url = "//www.whateverorigin.org/get?url=" + encodeURIComponent("http://finance.google.com/finance/company_news?q="+ ticker +"&output=rss")
+	var url = "//whatever-origin.herokuapp.com/get?url=" + encodeURIComponent("http://finance.google.com/finance/company_news?q="+ ticker +"&output=rss")
 	$.getJSON(url, function(data){
 		data = data.contents;
 		var $XML = $(data);

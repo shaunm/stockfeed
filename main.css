@@ -34,4 +34,21 @@ td {
   line-height: 1;
   font-size: small;
   border-bottom: 1px, solid;
-}ma
+}
+
+body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+ }
+
+ main {
+   flex: 1 0 auto;
+ }
+
+ .page-footer {
+    padding-top: 20px;
+    color: #fff;
+    background-color: #808080;
+    font-size: smaller;
+}
