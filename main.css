@@ -43,8 +43,11 @@ td {
   background-color: white!important;
 
 }
-.finData td{
+.finData td, .finData th, .finData tr, .finData{
   white-space: nowrap;
+  width: auto;
+
+
 }
 body {
    display: flex;
