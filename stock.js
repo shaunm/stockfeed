@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	console.log("ready!");
-	ticker = location.search.split('s=')[1];
+	ticker = location.search.split('t=')[1];
 	summary(ticker);
 	times = quote(ticker);
 	financials(ticker);
@@ -84,21 +84,24 @@ function financials(ticker) {
 }
 
 function rss(ticker){
-	var url = "http://www.whateverorigin.org/get?url=" + encodeURIComponent("http://finance.google.com/finance/company_news?q="+ ticker +"&output=rss")
-	$.get(url, function(data) {
-	    var $XML = $(data);
-	    $XML.find("item").each(function() {
-	        var $this = $(this),
-	            item = {
-	                title:       $this.find("title").text(),
-	                link:        $this.find("link").text(),
-	                pubDate:     $this.find("pubDate").text(),
-	            };
-	        entry = '<a href="'+ item.link + '"><span class="rss-title>'+item.title+'</span></a><span class="grey-text">'+ pubDate + '</span></br>';
-	        $("#feed").append(entry);
+	var url = "//www.whateverorigin.org/get?url=" + encodeURIComponent("http://finance.google.com/finance/company_news?q="+ ticker +"&output=rss")
+	$.getJSON(url, function(data){
+		data = data.contents;
+		var $XML = $(data);
+		$XML.find("item").each(function() {
+				var $this = $(this),
+						item = {
+								title:       $this.find("title").text(),
+								link:        $this.find("link").text(),
+								pubDate:     $this.find("pubDate").text(),
+						};
+				entry = '<a href="'+ item.link + '"><span class="rss-title>'+item.title+'</span></a><span class="grey-text">'+ pubDate + '</span></br>';
+				$("#feed").append(entry);
 
-	    });
+		});
+
 	});
+
 }
 /*
 TODO:

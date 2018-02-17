@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<title></title>
+</head>
+<body>
+	<section id="company">
+		<div class="basic-data">
+			<div class="top-row z-depth-2 white">
+				<div class="container">
+					<div class="row">
+						<div class="col s9">
+							<div>
+								<span id="companyName"></span> <span id="symbol"></span>
+							</div>
+							<div>
+								<span id="price"></span><span id="change"></span> <span id="changePercent"></span>
+							</div>
+							<p class="grey-text source-data"><span id="exchange"></span> (<span id="latestSource"></span> @ <span id="latestTime"></span>)</p>
+						</div>
+						<div align="right" class="col s3"><img  style=" max-width: 100%;" id="companyImage"></div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<span class="section-title">Data</span>
+				<div class="card-panel">
+					<div class="details">
+						<div class="row">
+							<div class="col s12 m6">
+								<p><b><span id="sector"></span> &gt; <span id="industry"></span></b></p>
+								<p><span id="description"></span></p>
+								<p><a id="url"></a></p>
+								<p></p>
+							</div>
+							<div class="col s12 m6"><img id="chart" style="width:100%;"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<table>
+								<tr>
+									<td><b>Open: </b><span id='open'></span></td>
+									<td><b>Volume: </b><span id='latestVolume'></span></td>
+									<td><b>52 Week High: </b><span id='week52High'></span></td>
+								</tr>
+								<tr>
+									<td><b>High: </b><span id='high'></span></td>
+									<td><b>Avg Volume: </b><span id='avgTotalVolume'></span></td>
+									<td><b>52 Week Low: </b><span id='week52Low'></span></td>
+								</tr>
+								<tr>
+									<td><b>Low: </b><span id='low'></span></td>
+									<td><b>Market Cap: </b><span id='marketCap'></span></td>
+									<td><b>Short Interest: </b><span id='shortInterest'></span></td>
+								</tr>
+								<tr>
+									<td><b>Dividend Yield: </b><span id='dividendYield'></span></td>
+									<td><b>Beta: </b><span id='beta'></span></td>
+									<td><b>Institutional Ownership: </b><span id='institutionPercent'></span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="financials">
+		<div class="container">
+			<span class="section-title">Financials</span>
+			<div class="card-panel">
+				<table class="responsive-table">
+					<tr class="finData responsive-table" id="finRow">
+						<td>
+							<p><b>Income statement:</b></p>
+							<p>Gross profit</p>
+							<p>Cost of revenue</p>
+							<p>Operating revenue</p>
+							<p>Total revenue</p>
+							<p>Operating income</p>
+							<p>Net income</p>
+							<p>Research and development</p>
+							<p>Operating expense</p>
+							<p><b>Balance sheet:</b></p>
+							<p>Current assets</p>
+							<p>Total assets</p>
+							<p>Total liabilities</p>
+							<p>Current cash</p>
+							<p>Current debt</p>
+							<p>Total cash</p>
+							<p>Total debt</p>
+							<p>Shareholder equity</p>
+							<p><b>Cash:</b></p>
+							<p>Cash change</p>
+							<p>Cash flow</p>
+							<p>Operating gains losses</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</section>
+	<section id="news">
+		<div class="container">
+			<span class="section-title">News</span>
+			<div class="card-panel">
+				<div id="feed"></div>
+			</div>
+		</div>
+	</section>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" rel="stylesheet">
+	<link href="main.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js">
+	</script>
+	<script src="stock.js">
+	</script>
+</body>
+</html>
