@@ -5,12 +5,9 @@ $(document).ready(function() {
 	times = quote(ticker);
 	financials(ticker);
 	refresher = setInterval(function() {
-		if (Date.now() > times[1]) {
-			Materialize.toast('Market is closed.', 4000);
-			clearInterval(refresher);
-		} else {
+		
 			quote(ticker);
-		}
+		
 	}, 1500);
 	rss(ticker);
 });
